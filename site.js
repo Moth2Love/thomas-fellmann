@@ -87,7 +87,7 @@
   const lb = document.getElementById('lightbox');
   if (lb && typeof lb.showModal === 'function') {
     const big = lb.querySelector('img');
-    document.querySelectorAll('.ads-grid img, .ads-wide img, .proof img, .shop-panel img, .scenes img').forEach((img) => {
+    document.querySelectorAll('.ads-grid img, .ads-wide img, .proof img, .shop-panel img, .scenes img, .spot-imgs img, .voice-top img, .lesson-wide img').forEach((img) => {
       img.classList.add('zoomable'); img.tabIndex = 0; img.setAttribute('role', 'button');
       const open = () => { big.src = img.currentSrc || img.src; big.alt = img.alt; lb.showModal(); };
       img.addEventListener('click', open);
