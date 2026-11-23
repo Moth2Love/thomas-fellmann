@@ -322,7 +322,15 @@ html:not(.js) .demo, html:not(.js) .try { display: none; }
 .hero-inner { align-items: start; padding-top: clamp(22px, 2.6vw, 36px); }
 .hero .fan { margin-top: 24px; }
 .who { margin-bottom: 18px; }
-.hero h1 { font-size: clamp(2.6rem, 4.3vw, 4.1rem); max-width: 21ch; }
+.hero h1 { font-size: clamp(2.4rem, 3.9vw, 3.8rem); max-width: 19ch; }
+.hero-copy { position: relative; z-index: 2; min-width: 0; }
+.fan-l { left: -34%; }
+.fan-r { right: -34%; }
+.how-sec { max-width: var(--wrap); margin: 0 auto; padding: var(--pad) var(--g) 0; }
+.how-sec .how { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.how li { display: flex; flex-direction: column; }
+.how li p { flex: 1; }
+.how .more { margin-top: 14px; font-weight: 800; color: var(--ink); text-decoration-color: var(--y); text-decoration-thickness: 3px; }
 .sub { max-width: 52ch; margin-top: 16px; font-size: clamp(1.05rem, 1.4vw, 1.2rem); }
 .decision { display: grid; grid-template-columns: auto 1fr; column-gap: 18px; align-items: end; margin-top: 18px; max-width: 600px; padding: 18px 20px 16px; background: var(--ink); color: #fff; border-radius: 14px; text-decoration: none; }
 .decision .tag { grid-column: 1 / -1; justify-self: start; background: var(--y); color: var(--ink); font-weight: 800; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; padding: 3px 9px; border-radius: 999px; }
@@ -499,3 +507,6 @@ html:not(.js) .demo, html:not(.js) .try { display: none; }
 /* Message shown when an email button is clicked (the address is copied as well) */
 .toast { position: fixed; left: 50%; bottom: 22px; transform: translate(-50%, 20px); z-index: 60; margin: 0; max-width: min(92vw, 560px); padding: 14px 18px; border-radius: 8px; background: #0b0b0b; color: #fff; font-weight: 700; font-size: .98rem; line-height: 1.35; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,.35); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; overflow-wrap: anywhere; }
 .toast.on { opacity: 1; transform: translate(-50%, 0); }
+
+@media (max-width: 1080px) { .how-sec .how { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .how-sec .how { grid-template-columns: 1fr; } }
